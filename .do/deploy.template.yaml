@@ -1,8 +1,8 @@
 spec:
-  name: sample-html
+  name: nukmans-tech-landing-page
   static_sites:
   - environment_slug: html
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-html.git
-    name: sample-html
+      repo_clone_url: https://github.com/chuki2/nukmans-tech-landing-page.git
+    name: nukmans-tech-landing-page
