@@ -462,7 +462,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Nukman's Tech. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Nukman's Tech. All rights reserved.</p>
             <p>Building the future, one line of code at a time.</p>
             <div class="social-links">
                 <a href="#">📧</a>
@@ -515,7 +515,7 @@
                 if (entry.isIntersecting) {
                     const counters = entry.target.querySelectorAll('.counter');
                     counters.forEach(counter => {
-                        if (counter.innerText === '0') {
+                        if (parseInt(counter.innerText) === 0) {
                             animateCounter(counter);
                         }
                     });
@@ -527,6 +527,9 @@
         if (statsSection) {
             observer.observe(statsSection);
         }
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
