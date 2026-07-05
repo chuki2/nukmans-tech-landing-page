@@ -687,9 +687,10 @@
         }
 
         .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 42px 64px;
             max-width: 1000px;
             margin: 0 auto;
             align-items: center;
@@ -697,41 +698,64 @@
 
         .client-logo {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            background: var(--light);
-            border-radius: 15px;
-            height: 120px;
-            opacity: 0.7;
+            gap: 12px;
+            width: 170px;
+            min-height: 118px;
+            text-align: center;
             transition: all 0.3s ease;
-            filter: grayscale(100%);
         }
 
         .client-logo:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
         }
 
         .client-logo img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 64px;
             object-fit: contain;
+            opacity: 0.75;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover img {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .client-name {
+            color: var(--dark);
+            font-size: 0.86rem;
+            font-weight: 600;
+            line-height: 1.35;
         }
 
         @media (max-width: 1024px) {
             .clients-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
+                gap: 36px 48px;
             }
         }
 
         @media (max-width: 768px) {
             .clients-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+                gap: 28px 34px;
+            }
+
+            .client-logo {
+                width: 145px;
+                min-height: 108px;
+                gap: 10px;
+            }
+
+            .client-logo img {
+                max-height: 52px;
+            }
+
+            .client-name {
+                font-size: 0.8rem;
             }
         }
 
@@ -1589,15 +1613,35 @@
         <div class="clients-grid">
             <div class="client-logo">
                 <img src="assets/images/clients/logo1.png" alt="Suruhanjaya Sekuriti Malaysia">
+                <span class="client-name">Suruhanjaya Sekuriti Malaysia</span>
             </div>
             <div class="client-logo">
                 <img src="assets/images/clients/logo2.png" alt="AquaNano">
+                <span class="client-name">AquaNano</span>
             </div>
             <div class="client-logo">
                 <img src="assets/images/clients/logo3.png" alt="Subalipack">
+                <span class="client-name">Subalipack</span>
             </div>
             <div class="client-logo">
                 <img src="assets/images/clients/logo4.png" alt="GoApps Technology Sdn Bhd">
+                <span class="client-name">GoApps Technology</span>
+            </div>
+            <div class="client-logo">
+                <img src="assets/images/clients/tdm_logo.png" alt="Tentera Darat Malaysia">
+                <span class="client-name">Tentera Darat Malaysia</span>
+            </div>
+            <div class="client-logo">
+                <img src="assets/images/clients/th_logo.png" alt="Lembaga Tabung Haji">
+                <span class="client-name">Lembaga Tabung Haji</span>
+            </div>
+            <div class="client-logo">
+                <img src="assets/images/clients/tnb_logo.svg" alt="Tenaga Nasional Berhad">
+                <span class="client-name">Tenaga Nasional Berhad</span>
+            </div>
+            <div class="client-logo">
+                <img src="assets/images/clients/pet_logo.png" alt="Petronas">
+                <span class="client-name">Petronas</span>
             </div>
         </div>
     </section>
@@ -1650,7 +1694,7 @@
             <div class="section-header">
                 <p class="section-subtitle">Our Journey</p>
                 <h2 class="section-title">Project & Team Experience</h2>
-                <p class="section-desc">Our team has delivered multiple enterprise platforms across identity management, asset systems, warehouse solutions, accounting, and mobile applications, including projects completed via agency engagements for large organizations.</p>
+                <p class="section-desc">Our team has delivered multiple enterprise platforms across identity management, asset systems, warehouse solutions, accounting, and mobile applications, including subcontracted delivery engagements for large organizations.</p>
             </div>
             
             <!-- Tab Navigation -->
@@ -1741,6 +1785,53 @@
                         <span class="experience-tag">Warehouse System</span>
                         <span class="experience-tag">Barcode Tracking</span>
                         <span class="experience-tag">Enterprise Solution</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Asset Management ETL Integration API</h3>
+                            <p class="company">Tentera Darat Malaysia (via GoApps)</p>
+                        </div>
+                        <span class="experience-date">Subcontractor Engagement</span>
+                    </div>
+                    <div class="experience-role">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Backend API & Integration Development</span>
+                    </div>
+                    <p class="experience-description">
+                        Developed backend API integration between asset management systems to support ETL data flow, data synchronization, and reliable exchange between operational platforms. Delivered as a subcontracted development engagement under GoApps.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">API Integration</span>
+                        <span class="experience-tag">ETL</span>
+                        <span class="experience-tag">Asset Management</span>
+                        <span class="experience-tag">Backend API</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>RFID & QR Asset Scanner Mobile App</h3>
+                            <p class="company">Lembaga Tabung Haji (via GoApps)</p>
+                        </div>
+                        <span class="experience-date">Subcontractor Engagement</span>
+                    </div>
+                    <div class="experience-role">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Mobile App & Backend API Development</span>
+                    </div>
+                    <p class="experience-description">
+                        Developed a mobile scanner application for RFID and QR code-based asset tagging and verification, together with backend APIs for asset lookup, update, and verification workflows. Delivered as a subcontracted development engagement under GoApps.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Mobile App</span>
+                        <span class="experience-tag">RFID</span>
+                        <span class="experience-tag">QR Code</span>
+                        <span class="experience-tag">Asset Tagging</span>
+                        <span class="experience-tag">Backend API</span>
                     </div>
                 </div>
 
@@ -2004,6 +2095,53 @@
                         <span class="experience-tag">Warehouse System</span>
                         <span class="experience-tag">Barcode Tracking</span>
                         <span class="experience-tag">Enterprise Solution</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Asset Management ETL Integration API</h3>
+                            <p class="company">Tentera Darat Malaysia (via GoApps)</p>
+                        </div>
+                        <span class="experience-date">Subcontractor Engagement</span>
+                    </div>
+                    <div class="experience-role">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Backend API & Integration Development</span>
+                    </div>
+                    <p class="experience-description">
+                        Developed backend API integration between asset management systems to support ETL data flow, data synchronization, and reliable exchange between operational platforms. Delivered as a subcontracted development engagement under GoApps.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">API Integration</span>
+                        <span class="experience-tag">ETL</span>
+                        <span class="experience-tag">Asset Management</span>
+                        <span class="experience-tag">Backend API</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>RFID & QR Asset Scanner Mobile App</h3>
+                            <p class="company">Lembaga Tabung Haji (via GoApps)</p>
+                        </div>
+                        <span class="experience-date">Subcontractor Engagement</span>
+                    </div>
+                    <div class="experience-role">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Mobile App & Backend API Development</span>
+                    </div>
+                    <p class="experience-description">
+                        Developed a mobile scanner application for RFID and QR code-based asset tagging and verification, together with backend APIs for asset lookup, update, and verification workflows. Delivered as a subcontracted development engagement under GoApps.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Mobile App</span>
+                        <span class="experience-tag">RFID</span>
+                        <span class="experience-tag">QR Code</span>
+                        <span class="experience-tag">Asset Tagging</span>
+                        <span class="experience-tag">Backend API</span>
                     </div>
                 </div>
             </div>
